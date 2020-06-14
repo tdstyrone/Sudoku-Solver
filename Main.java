@@ -1,8 +1,4 @@
-package com.tdstyrone;
-
 public class Main {
-
-
 
     public Main(){ }
 
