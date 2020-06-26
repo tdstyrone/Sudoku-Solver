@@ -1,5 +1,5 @@
 # Sudoku-Solver
-A simple text-based solver for the game of Sodoku that implements a backtracking algorithm.
+A simple text-based solver for the game of Sudoku that implements a backtracking algorithm.
 
 # Instructions
 In order to solve your required Sodoku puzzle:
