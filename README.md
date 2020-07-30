@@ -9,6 +9,6 @@ In order to solve your required Sodoku puzzle:
 
 # Sample
 
-###### Input Example:
-![Input](https://github.com/tdstyrone/Sudoku-Solver/blob/master/IMAGES/INPUT.png)| ![Output](https://github.com/tdstyrone/Sudoku-Solver/blob/master/IMAGES/OUTPUT.png)
+###### Input Example:                                                                                          ###### Output Example:
+![Input](https://github.com/tdstyrone/Sudoku-Solver/blob/master/IMAGES/INPUT.png)                              ![Output](https://github.com/tdstyrone/Sudoku-Solver/blob/master/IMAGES/OUTPUT.png)
 
