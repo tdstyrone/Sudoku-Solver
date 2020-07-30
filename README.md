@@ -10,5 +10,5 @@ In order to solve your required Sodoku puzzle:
 # Sample
 
 ###### Input Example:
-![Input](/Sudoku-Solver/IMAGES/INPUT.png)
+![Input](https://github.com/tdstyrone/Sudoku-Solver/blob/master/IMAGES/INPUT.png)
 
