@@ -1,25 +1,29 @@
+package com.tdstyrone;
+
 public class Main {
+
+
 
     public Main(){ }
 
-    public boolean solve(int[][] board){
+    public boolean solveBacktrack(int[][] board){
     /*
     Solves a sudoku board using backtracking
     :param board: 2-Dimensional list of integers
     :return: solution
     */
 
-        int[] find = findEmpty(board);
-        if (find == null)
+        int[] emptyCell = findEmpty(board);
+        if (emptyCell == null)
             return true;
 
         for (int i = 1; i < 10; i++){
-            int row = find[0];
-            int col = find[1];
-            if (isBoardValid(board, i, find)){
+            int row = emptyCell[0];
+            int col = emptyCell[1];
+            if (isBoardValid(board, i, emptyCell)){
                 board[row][col] = i;
 
-                if (solve(board))
+                if (solveBacktrack(board))
                         return true;
 
                 board[row][col] = 0;
@@ -68,11 +72,12 @@ public class Main {
     */
         for (int i = 0; i < board.length; i++){
             if (i % 3 == 0 && i != 0)
-                System.out.println("------------------------");
+                System.out.println("\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u254B\u2501\u2501\u2501\u2501\u2501"+
+                                   "\u2501\u2501\u2501\u254B\u2501\u2501\u2501\u2501\u2501\u2501");
 
             for (int j = 0; j < board[i].length; j++){
                 if(j % 3 == 0 && j !=0 )
-                    System.out.print(" | ");
+                    System.out.print(" \u2503 ");
 
                 if (j == 8)
                     System.out.println(board[i][j]);
@@ -106,7 +111,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[][] SODOKU_BOARD = {
+        int[][] SUDOKU_BOARD = {
                 {7, 8, 0, 4, 0, 0, 1, 2, 0},
                 {6, 0, 0, 0, 7, 5, 0, 0, 9},
                 {0, 0, 0, 6, 0, 1, 0, 7, 8},
@@ -119,11 +124,11 @@ public class Main {
         };
 
         Main board1 = new Main();
-        board1.displayBoard(SODOKU_BOARD );
-        board1.solve(SODOKU_BOARD );
+        board1.displayBoard(SUDOKU_BOARD );
+        board1.solveBacktrack(SUDOKU_BOARD );
         System.out.println("                        ");
         System.out.println("-----SOLVED SOLUTION----");
         System.out.println("                        ");
-        board1.displayBoard(SODOKU_BOARD );
+        board1.displayBoard(SUDOKU_BOARD );
     }
 }
